@@ -3,7 +3,7 @@
 #
 FROM maven:latest AS build
 COPY . .
-RUN mvn clean package -DskipTests
+RUN mvn clean package -f pom.xml -DskipTests
 
 #
 # Package stage
